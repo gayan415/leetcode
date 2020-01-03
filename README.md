@@ -1,2 +1,2 @@
-# leetcode
-Leetcode solutions using Python
+# LeetCode
+LeetCode Algorithm Solutions in Python3

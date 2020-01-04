@@ -15,7 +15,7 @@ class ListNode:
         self.val = x
         self.next = None
 
-# Solution 01
+# iteratively solution
 class Solution1:
 	def removeElements(self, head: ListNode, val: int) -> ListNode:
     myList = ListNode(0)
@@ -24,15 +24,15 @@ class Solution1:
       if head.val != val:
         tmp = ListNode(head.val)
         myList.next = tmp
-          myList = tmp
+        myList = tmp
       head = head.next
     return myHead.next
 
-# Solution 02
+# recursive solution
 class Solution2:
   def removeElements(self, head: ListNode, val: int) -> ListNode:
     if head == None: return None
-      head.next = self.removeElements(head.next, val);
-      if head.val == val:
-        return head.next
-      return head
+    head.next = self.removeElements(head.next, val);
+    if head.val == val:
+      return head.next
+    return head
